@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jurisprudence Navigator</title>
+<meta name="theme-color" content="#0D1520">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Jurisprudence">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -120,7 +128,7 @@ details.more2 ul{padding-left:18px}
 <body>
 <header class="top"><div class="wrap">
   <div class="brand">Jurisprudence Navigator</div>
-  <div class="sub">LAW-203 · Semester III · University of the Punjab · v19</div>
+  <div class="sub">LAW-203 · Semester III · University of the Punjab · v20</div>
 </div></header>
 <main class="wrap">
 <section class="view on" id="v-home">
@@ -282,6 +290,11 @@ $("#q").addEventListener("input",function(){
 if(load("jn_fork")==="spar"){$('[data-fork="spar"]').click()}
 var h=(location.hash||"").replace("#","");
 if(["home","thinkers","clashes"].indexOf(h)>-1||MODS[h])go(h);
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load",function(){try{navigator.serviceWorker.register("sw.js")}catch(e){}});
+}
 </script>
 </body>
 </html>
