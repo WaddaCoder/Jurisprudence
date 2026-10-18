@@ -128,7 +128,7 @@ details.more2 ul{padding-left:18px}
 <body>
 <header class="top"><div class="wrap">
   <div class="brand">Jurisprudence Navigator</div>
-  <div class="sub">LAW-203 · Semester III · University of the Punjab · v20</div>
+  <div class="sub">LAW-203 · Semester III · University of the Punjab · v21</div>
 </div></header>
 <main class="wrap">
 <section class="view on" id="v-home">
@@ -194,7 +194,7 @@ function table(t){
 }
 
 /* home */
-var nLive=IDX.mods.filter(function(m){return m[5]}).length;$("#homeLead").textContent="Thirteen units in sixteen modules (Unit IV split in five, V and VI joined). "+nLive+" live; the rest unlock in numbered passes. Each card shows how well the three canonical books cover it.";
+var nLive=IDX.mods.filter(function(m){return m[5]}).length;$("#homeLead").textContent="Thirteen units in sixteen modules (Unit IV split in five, V and VI joined). "+nLive+" are ready. Ready means fully built from the supplied books. Partial means built, but a book for it is still missing (V–VI needs Veitch; VIII has limited sources).";
 var mods=$("#mods");
 IDX.mods.forEach(function(m){
   var live=!!m[5];
@@ -202,7 +202,7 @@ IDX.mods.forEach(function(m){
   el.className="card"+(live?" pilot":" dim");
   if(live){el.setAttribute("data-go",m[5])}
   el.setAttribute("data-s",(m[0]+" "+m[1]+" "+m[2]).toLowerCase());
-  el.innerHTML='<div class="num">'+esc(m[0])+'</div><div><div class="t">'+esc(m[1])+'</div><div class="d">'+esc(m[2])+'</div><span class="chip '+m[3]+'">'+esc(m[4])+'</span></div>';
+  el.innerHTML='<div class="num">'+esc(m[0])+'</div><div><div class="t">'+esc(m[1])+'</div><div class="d">'+esc(m[2])+'</div><span class="chip '+m[3]+'">'+esc(m[3]=='ok'?'Ready':m[3]=='part'?'Partial':'Soon')+'</span></div>';
   mods.appendChild(el);
 });
 
