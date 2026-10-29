@@ -3,7 +3,7 @@
   "short_name": "Jurisprudence",
   "description": "LAW-203 Jurisprudence study companion: rails, boundary maps and challenges.",
   "id": "jurisprudence-navigator",
-  "start_url": "Jurisprudence_Navigator_v2.1.html",
+  "start_url": "Jurisprudence_Navigator_v2.3.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
